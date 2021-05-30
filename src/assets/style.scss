@@ -1,0 +1,90 @@
+@import url("./bootstrap-grid.min.css");
+@import url("./bootstrap-utilities.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light: #f6f6f6;
+  --color: #262c3a;
+}
+
+body {
+  height: 100vh;
+  background: var(--color);
+  overflow: hidden;
+}
+
+#app {
+  font-family: Roboto, "Segoe UI", "Open Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--light);
+
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.stop-back {
+  background-image: url('./stop.gif');
+}
+
+.animate-back {
+  background-image: url('./animate.gif');
+}
+
+#display {
+  color: var(--light);
+  line-height: 2em;
+  font-size: 1.8em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.typing::after {
+  content: "|";
+  opacity: 1;
+  margin-left: 5px;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.me-back {
+  background-image: url('./WSilva.png');
+  background-size: 300px;
+}
+
+#info {
+  color: var(--light);
+  line-height: 2em;
+  font-size: 1.5em;
+  margin: 0 auto;
+}
+
+#info {
+  h2::after, span::after, a::after, p::after {
+    content: "|";
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+}
+
